@@ -1,0 +1,293 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  // primary
+  --light-red-cta: hsl(356, 100%, 66%);
+  --very-light-red: hsl(355, 100%, 74%); // cta
+  --very-dark-blue: hsl(208, 49%, 24%); // headings
+  // neutral
+  --white-text: hsl(0, 0%, 100%);
+  --grayish-blue: hsl(240, 2%, 79%); // footer text
+  --very-dark-grayish-blue: hsl(207, 13%, 34%); // body copy
+  --very-dark-black-blue: hsl(240, 10%, 16%); // footer bg
+  // Gradient
+  // Background gradient - Intro/CTA mobile nav:
+  --very-light-red: hsl(13, 100%, 72%);
+  --light-red: hsl(353, 100%, 62%);
+  // Background gradient - body:
+  --very-dark-gray-blue: hsl(237, 17%, 21%);
+  --very-dark-desaturated-blue: hsl(237, 23%, 32%);
+  // Typography
+  --body-text: 1rem;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  //font-family: "Ubuntu", sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+
+  @media screen and (max-width: 600px) {
+    width: 90%;
+    margin: auto;
+    border: 1px dotted blue;
+  }
+}
+
+.main-header {
+  background-color: var(--very-light-red);
+  background-image: url(../images/bg-pattern-intro.svg);
+  //background-blend-mode: darken;
+
+  background-position: center;
+
+  background-repeat: space;
+  z-index: 20;
+  border: 1px dotted blue;
+  border-bottom-left-radius: 100px;
+}
+
+.main-nav {
+  height: 15vh;
+  display: flex;
+  padding-top: 2rem;
+
+  @media screen and (max-width: 600px) {
+    height: 12.5vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.nav-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (max-width: 600px) {
+    border: 1px dotted blue;
+    position: absolute;
+    top: 12.5vh;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.right-nav-content,
+.left-nav-content {
+  @media screen and (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.brand-logo {
+  float: left;
+  margin-right: 1.5rem;
+  border: 1px dotted blue;
+  align-self: center;
+
+  img {
+    width: 6rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    float: none;
+    //position: absolute;
+    left: 0;
+  }
+}
+
+.mobile-menu {
+  display: none;
+  //position: absolute;
+  right: 0;
+
+  @media screen and (max-width: 600px) {
+    display: block;
+  }
+}
+
+.dropdown {
+  --btn-vpadding: 0.94rem;
+  float: left;
+  //margin: 0 0.5rem;
+  position: relative;
+
+  @media screen and (max-width: 600px) {
+    padding: 10px 20px;
+  }
+}
+
+.dropdown-toggle,
+.nav-item {
+  padding: 0.25rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    text-align: center;
+    padding: var(--btn-vpadding) 1rem;
+  }
+}
+
+.dropdown-content {
+  //border: 1px dotted blue;
+
+  display: none;
+  position: absolute;
+  min-width: 8rem;
+  border-radius: 0.25rem;
+  background-color: var(--white-text);
+
+  z-index: 1;
+  padding: 0.75rem 0;
+}
+
+.dropdown-toggle {
+  //border: 1px dotted blue;
+
+  background-color: transparent;
+  font-weight: 400;
+  color: var(--white-text);
+
+  .dark-arrow {
+    display: none;
+  }
+
+  .light-arrow,
+  .dark-arrow {
+    margin-left: 0.5rem;
+    width: 0.75rem;
+  }
+  @media screen and (max-width: 600px) {
+    .dark-arrow {
+      display: inline;
+    }
+    .light-arrow {
+      display: none;
+    }
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+
+  background-color: var(--white-text);
+}
+
+.dropdown-link {
+  padding: 0.625rem 1rem;
+  margin: 2px 0;
+  text-decoration: none;
+  font-size: 0.85rem;
+  color: var(--very-dark-desaturated-blue);
+
+  width: 100%;
+
+  @media screen and (max-width: 600px) {
+    text-align: center;
+  }
+}
+
+.dropdown-link:hover {
+  //background-color: var(--white-text);
+  color: var(--very-dark-black-blue);
+}
+
+.arrow-active {
+  transform: scaleY(-1);
+}
+
+.dropdown-content {
+  .dropdown-link {
+    display: block;
+  }
+}
+
+.nav-item {
+  float: left;
+}
+
+.left-nav-content .nav-item {
+  padding: 0.625rem 1.5rem;
+  border: 1px dotted blue;
+  text-decoration: none;
+  color: var(--white-text);
+}
+
+.left-nav-content .signup {
+  background-color: var(--white-text);
+  color: var(--light-red-cta);
+  border-radius: 1.25rem;
+}
+/* 
+
+    Hero
+
+*/
+
+.hero-section {
+  padding: 5rem 0;
+  text-align: center;
+  border: 1px dotted blue;
+}
+
+.hero-section .main-heading {
+  color: var(--white-text);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-section .main-paragraph {
+  color: var(--white-text);
+  margin: 1rem 0;
+  margin-bottom: 4.5rem;
+}
+
+.hero-cta {
+  margin: auto;
+}
+
+.cta-link {
+  padding: 0.65rem 0.75rem;
+
+  text-decoration: none;
+  text-transform: capitalize;
+  border-radius: 20px;
+
+  &:nth-child(1) {
+    background-color: var(--white-text);
+    color: var(--light-red-cta);
+    margin-right: 1rem;
+    border: 2px solid var(--white-text);
+  }
+  &:nth-last-child(1) {
+    background-color: var(--light-red-cta);
+    color: var(--white-text);
+    border: 2px solid var(--white-text);
+    margin-right: 1rem;
+  }
+}

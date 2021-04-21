@@ -26,6 +26,17 @@ body {
   font-family: "Overpass", sans-serif;
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--very-dark-grayish-blue);
+  opacity: 0.4;
+  display: none;
+}
+
 .container {
   width: 75%;
   margin: auto;
@@ -54,9 +65,16 @@ body {
   background-image: url(../images/bg-pattern-intro.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 160%;
+  background-size: 200%;
   z-index: 20;
   border-bottom-left-radius: 6.25rem;
+}
+
+@media screen and (max-width: 600px) {
+  .main-header {
+    background-size: 420%;
+    background-position-x: -140vw;
+  }
 }
 
 .main-nav {
@@ -187,10 +205,15 @@ body {
   background-color: var(--white-text);
 }
 
+@media screen and (max-width: 1024px) {
+  .dropdown:hover .dropdown-content {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .dropdown:hover .dropdown-content {
     background-color: var(--grayish-blue);
-    display: none;
   }
 }
 
@@ -378,12 +401,27 @@ body {
   margin-bottom: 1.5rem;
 }
 
+@media screen and (max-width: 600px) {
+  .hero-section .main-heading {
+    font-size: 2.25rem;
+    font-weight: 500;
+  }
+}
+
 .hero-section .main-paragraph {
   color: var(--white-text);
   font-family: "Overpass", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   margin: 1rem 0;
   margin-bottom: 4.5rem;
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width: 600px) {
+  .hero-section .main-paragraph {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
 }
 
 .hero-cta {

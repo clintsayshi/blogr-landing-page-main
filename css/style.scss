@@ -29,7 +29,17 @@
 
 body {
   font-family: "Overpass", sans-serif;
-  //font-family: "Ubuntu", sans-serif;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--very-dark-grayish-blue);
+  opacity: 0.4;
+  display: none;
 }
 
 .container {
@@ -49,19 +59,20 @@ body {
 }
 
 .main-header {
-  // border: 1px dotted blue;
-
   background-color: var(--very-light-red-bg);
   background-image: url(../images/bg-pattern-intro.svg);
-  //background-attachment: fixed;
 
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 160%;
-  //background-repeat: space;
+  background-size: 200%;
   z-index: 20;
 
   border-bottom-left-radius: 6.25rem;
+
+  @media screen and (max-width: 600px) {
+    background-size: 420%;
+    background-position-x: -140vw;
+  }
 }
 
 .main-nav {
@@ -161,9 +172,12 @@ body {
 
   background-color: var(--white-text);
 
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+
   @media screen and (max-width: 600px) {
     background-color: var(--grayish-blue);
-    display: none;
   }
 }
 
@@ -255,7 +269,6 @@ body {
 }
 
 .dropdown-link:hover {
-  //background-color: var(--white-text);
   color: var(--very-dark-gray-blue);
   font-weight: 600;
 }
@@ -347,14 +360,25 @@ body {
   font-size: 2.75rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
+
+  @media screen and (max-width: 600px) {
+    font-size: 2.25rem;
+    font-weight: 500;
+  }
 }
 
 .hero-section .main-paragraph {
   color: var(--white-text);
   font-family: "Overpass", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   margin: 1rem 0;
   margin-bottom: 4.5rem;
+  font-size: 1.25rem;
+
+  @media screen and (max-width: 600px) {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
 }
 
 .hero-cta {

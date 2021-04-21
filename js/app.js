@@ -16,24 +16,17 @@ function clearDropdowns() {
   });
 }
 
-function fun(item) {
-  if (item.nextElementSibling.classList.contains("mobile-dropdown-content")) {
-    item.nextElementSibling.classList.remove("mobile-dropdown-content");
-    item.lastElementChild.classList.remove("arrow-active");
-  } else {
-    console.log("we here");
-
-    item.nextElementSibling.classList.add("mobile-dropdown-content");
-    item.lastElementChild.classList.add("arrow-active");
-  }
-}
-
 dropdown.forEach((item) => {
-  item.addEventListener("click", (e) => {
+  item.addEventListener("click", () => {
     clearDropdowns();
-    console.log(
-      item.nextElementSibling.classList.contains("mobile-dropdown-content")
-    );
-    fun(item);
+    if (item.nextElementSibling.classList.contains("mobile-dropdown-content")) {
+      item.nextElementSibling.classList.remove("mobile-dropdown-content");
+      item.lastElementChild.classList.remove("arrow-active");
+    } else {
+      console.log("we here");
+
+      item.nextElementSibling.classList.add("mobile-dropdown-content");
+      item.lastElementChild.classList.add("arrow-active");
+    }
   });
 });

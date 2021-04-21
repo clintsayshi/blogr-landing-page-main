@@ -211,12 +211,6 @@ body {
   }
 }
 
-@media screen and (max-width: 600px) {
-  .dropdown:hover .dropdown-content {
-    background-color: var(--grayish-blue);
-  }
-}
-
 .mobile-dropdown-content {
   display: block !important;
 }
@@ -233,7 +227,6 @@ body {
 
 @media screen and (max-width: 600px) {
   .dropdown-content {
-    background-color: whitesmoke;
     position: relative;
     width: 90%;
     margin: 1rem auto;
@@ -302,7 +295,7 @@ body {
 @media screen and (max-width: 600px) {
   .dropdown-link {
     text-align: center;
-    color: var(--very-dark-blue);
+    color: var(--very-dark-black-blue);
   }
 }
 

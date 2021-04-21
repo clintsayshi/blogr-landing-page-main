@@ -177,7 +177,7 @@ body {
   }
 
   @media screen and (max-width: 600px) {
-    background-color: var(--grayish-blue);
+    // background-color: var(--grayish-blue);
   }
 }
 
@@ -198,7 +198,7 @@ body {
   padding: 0.75rem 0;
 
   @media screen and (max-width: 600px) {
-    background-color: whitesmoke;
+    //background-color: rgba(245, 245, 245, 0.445);
     position: relative;
     width: 90%;
     margin: 1rem auto;
@@ -264,7 +264,7 @@ body {
 
   @media screen and (max-width: 600px) {
     text-align: center;
-    color: var(--very-dark-blue);
+    color: var(--very-dark-black-blue);
   }
 }
 

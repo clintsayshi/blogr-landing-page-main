@@ -59,24 +59,30 @@ body {
 }
 
 .main-header {
+  background-size: 85rem;
+  //background-position: center;
+  background-position-x: -25rem;
+  background-position-y: -20rem;
   background-color: var(--very-light-red-bg);
+  background-color: hsl(356, 100%, 66%);
   background-image: url(../images/bg-pattern-intro.svg);
+  //background-blend-mode: ;
 
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 200%;
+
   z-index: 20;
 
   border-bottom-left-radius: 6.25rem;
 
-  @media screen and (max-width: 600px) {
-    background-size: 420%;
-    background-position-x: -140vw;
+  @media screen and (min-width: 600px) {
+    background-size: 155rem;
+    background-position-x: -18rem;
+    background-position-y: -65rem;
   }
 }
 
 .main-nav {
-  height: 15vh;
+  //height: 15vh;
   display: flex;
   padding-top: 2rem;
 
@@ -348,22 +354,34 @@ body {
 */
 
 .hero-section {
-  // border: 1px dotted blue;
+  //border: 1px dotted blue;
 
-  padding: 4rem 0;
+  padding-top: 4rem;
+  padding-bottom: 8rem;
   text-align: center;
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 4rem;
+  }
+  @media screen and (min-width: 1024px) {
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+  }
 }
 
 .hero-section .main-heading {
   color: var(--white-text);
-  font-family: "Ubuntu", sans-serif;
-  font-size: 2.75rem;
+  font-family: "Overpass", sans-serif;
+  font-size: 2.35rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
 
-  @media screen and (max-width: 600px) {
-    font-size: 2.25rem;
-    font-weight: 500;
+  @media screen and (min-width: 600px) {
+    font-size: 2.75rem;
+    font-weight: 600;
+  }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0.75rem;
   }
 }
 
@@ -371,13 +389,17 @@ body {
   color: var(--white-text);
   font-family: "Overpass", sans-serif;
   font-weight: 400;
-  margin: 1rem 0;
-  margin-bottom: 4.5rem;
   font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-top: 1rem;
+  margin-bottom: 4.25rem;
 
-  @media screen and (max-width: 600px) {
-    font-size: 1.25rem;
-    font-weight: 400;
+  @media screen and (min-width: 600px) {
+    margin-bottom: 4.5rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 2.5rem;
   }
 }
 
@@ -386,30 +408,32 @@ body {
 }
 
 .cta-link {
-  padding: 0.75rem 0.85rem;
+  //border: 1px dotted blue !important;
+
+  padding: 1rem 1.25rem;
 
   text-decoration: none;
   text-transform: capitalize;
   font-weight: bold;
-  font-size: 0.95rem;
+  font-size: 1rem;
   border-radius: 2rem;
 
   &:nth-child(1) {
     background-color: var(--white-text);
     color: var(--light-red-cta);
     margin-right: 1rem;
-    border: 2px solid var(--white-text);
+    border: 1.5px solid var(--white-text);
 
     &:hover {
       background-color: var(--very-light-red);
-      border: 2px solid var(--very-light-red);
+      border: 1.5px solid var(--very-light-red);
       color: var(--white-text);
     }
   }
   &:nth-last-child(1) {
     background-color: var(--light-red-cta);
     color: var(--white-text);
-    border: 2px solid var(--white-text);
+    border: 1.5px solid var(--white-text);
     margin-right: 1rem;
 
     &:hover {
@@ -428,52 +452,53 @@ body {
 .section-1 {
   position: relative;
   margin: 4rem auto;
-  height: 120vh;
-  background-image: url(../images/illustration-editor-desktop.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right;
-  background-position-x: 57.5vw;
-
   color: var(--very-dark-desaturated-blue);
 
-  @media screen and (max-width: 1024px) {
-    background-position-x: 57.5vw;
-    margin: 2rem auto;
-    height: 45vh;
-  }
-  @media screen and (max-width: 768px) {
-    background-position-x: 45vw;
+  @media screen and (min-width: 600px) {
     margin: 4rem auto;
-    height: 60vh;
+
+    background-image: url(../images/illustration-editor-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    background-position-x: 26rem;
   }
-  @media screen and (max-width: 600px) {
-    margin: 4rem auto;
-    height: 120vh;
-    background-image: none;
+  @media screen and (min-width: 769px) {
+    height: max-content;
+    background-position-x: 37rem;
+    background-size: 40rem;
+    padding: 5.5rem 0;
+  }
+  @media screen and (min-width: 1025px) {
+    background-size: 50rem;
+    background-position-x: 50rem;
+    background-position-y: 2rem;
+    padding-bottom: 15.5rem;
+    margin-bottom: 2rem;
   }
 }
 
-.section-heading {
+.section-1 .section-heading {
   text-align: center;
   font-weight: bold;
   font-size: 1.85rem;
+  margin-bottom: 1rem;
+  padding: 1rem 0;
 
-  padding: 2rem 0;
-  margin-bottom: 5rem;
-
-  @media screen and (max-width: 1024px) {
-    margin-bottom: 2rem;
-  }
-  @media screen and (max-width: 768px) {
+  @media screen and (min-width: 601px) {
     font-size: 1.95rem;
     margin-bottom: 1rem;
     padding: 0.5rem 0;
   }
-  @media screen and (max-width: 600px) {
-    font-size: 1.95rem;
-    margin-bottom: 1rem;
-    padding: 1rem 0;
+  @media screen and (min-width: 769px) {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  @media screen and (min-width: 1025px) {
+    font-size: 1.85rem;
+
+    padding: 2rem 0;
+    margin-bottom: 2rem;
   }
 }
 
@@ -488,41 +513,47 @@ body {
 }
 
 .section-1 .section-content {
-  width: 50%;
+  text-align: center;
 
-  @media screen and (max-width: 768px) {
-    width: 45%;
+  @media screen and (min-width: 601px) {
+    width: 55%;
+    text-align: left;
   }
-  @media screen and (max-width: 600px) {
-    width: 100%;
-    text-align: center;
+  @media screen and (min-width: 769px) {
+    width: 50%;
   }
 }
 
 .section-1 .section-content article h4 {
-  padding: 1rem 0;
+  padding: 1rem 0.25rem;
   font-size: 1.45rem;
-  @media screen and (max-width: 768px) {
-    font-size: 1.25rem;
+  font-weight: bold;
+
+  @media screen and (min-width: 601px) {
+    font-size: 1.5rem;
   }
-  @media screen and (max-width: 600px) {
-    padding: 1rem 0.5rem;
+  @media screen and (min-width: 769px) {
+    padding: 1rem 0;
     font-size: 1.45rem;
-    font-weight: bold;
+  }
+  @media screen and (min-width: 1025px) {
+    padding: 1rem 0;
+    font-size: 1.25rem;
   }
 }
 .section-1 .section-content article p {
-  @media screen and (max-width: 600px) {
-    padding: 0 0.5rem;
+  padding: 0 0.5rem;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+  @media screen and (min-width: 600px) {
+    font-size: 1.1rem;
+    padding: 0;
   }
-}
-
-.section-1 .section-background-image {
-  //border: 1px dotted blue;
-  height: 100%;
-  img {
-    //width: 100%;
-    height: inherit;
+  @media screen and (min-width: 769px) {
+    font-size: 1.25rem;
+  }
+  @media screen and (min-width: 1025px) {
+    font-size: 1rem;
   }
 }
 
@@ -536,93 +567,90 @@ body {
 /* Section 02 */
 
 .section-2 {
-  height: 40vh;
-  width: 100%;
+  margin-top: 10rem;
+
   border-bottom-left-radius: 6.25rem;
   border-top-right-radius: 6.25rem;
+  background-color: var(--very-dark-gray-blue);
   background-image: url(../images/bg-pattern-circles.svg);
   background-repeat: no-repeat;
-  background-size: 55%;
-  background-position: left;
-  background-position-x: 5vw;
-  background-position-y: -25vh;
+  background-size: 40rem;
+  background-position-x: -10rem;
+  background-position-y: -20rem;
 
-  background-color: var(--very-dark-gray-blue);
-
-  @media screen and (max-width: 1024px) {
-    height: 20vh;
-    padding-bottom: 0;
-  }
-
-  @media screen and (max-width: 768px) {
-    height: 30vh;
-  }
-
-  @media screen and (max-width: 600px) {
+  @media screen and (min-width: 601px) {
+    margin: 10rem auto;
     height: fit-content;
-    background-size: 125%;
-    background-position-x: -5vw;
-    background-position-y: -20vh;
+    background-size: 40rem;
+    background-position-x: -10rem;
+    background-position-y: -20rem;
+  }
+  @media screen and (min-width: 769px) {
+    background-position-x: -5rem;
+  }
+  @media screen and (min-width: 1025px) {
+    background-size: 50rem;
+    background-position-x: -5rem;
+    background-position-y: -25rem;
   }
 }
 
 .section-2 .inner__section {
   position: relative;
-  height: inherit;
   display: flex;
+  flex-direction: column;
   align-items: center;
 
   .column {
-    flex: 1;
-    padding: 1rem;
+    padding: 0 1rem;
+
+    &:nth-last-child(1) {
+      margin-top: 10rem;
+      padding: 5rem 2rem;
+    }
   }
 
-  @media screen and (max-width: 600px) {
-    flex-direction: column;
+  @media screen and (min-width: 601px) {
+    flex-direction: row;
 
     .column {
-      width: 100%;
-      padding: 0;
-      margin: 0;
+      flex: 1;
+      text-align: left;
+
+      padding: 0 1rem;
 
       &:nth-child(1) {
-        padding-bottom: 10rem;
+        flex: 1;
       }
+
       &:nth-last-child(1) {
-        padding: 5rem 0;
+        margin-top: 1rem;
+        padding: 2rem 1rem;
       }
     }
   }
 }
 
 .section-2 .inner__section .column .column-cover {
-  //border: 1px dotted blue;
   position: absolute;
-  top: -25%;
-  height: 175%;
+  top: -10rem;
+  width: 100%;
+  left: 0;
+  right: 0;
 
-  @media screen and (max-width: 1024px) {
-    height: 125%;
-    left: 0;
+  @media screen and (min-width: 601px) {
+    top: -5rem;
+    width: 25rem;
+    left: -3rem;
   }
-
-  @media screen and (max-width: 768px) {
-    top: -15%;
-    height: 100%;
-  }
-  @media screen and (max-width: 600px) {
-    height: auto;
-    width: 100%;
+  @media screen and (min-width: 769px) {
+    width: 22.5rem;
     left: 0;
-    right: 0;
   }
 }
 
 .section-2 .feature {
-  @media screen and (max-width: 600px) {
-    width: 90% !important;
-    text-align: center;
-  }
+  text-align: center;
 }
 
 .section-2 .feature .feature-title {
@@ -633,87 +661,84 @@ body {
 
 .section-2 .feature .feature-desc {
   color: var(--white-text);
+  font-size: 1.2rem;
+  line-height: 1.75rem;
 }
 
 /* sec3 */
 
 .section-3 {
-  padding: 8rem 0;
-  margin-top: 10rem;
-  height: 110vh;
+  padding: 1rem 0;
+  margin-top: 0;
 
-  background-image: url(../images/illustration-laptop-desktop.svg);
-  background-repeat: no-repeat;
-  background-size: 60%;
-  background-position: right;
+  @media screen and (min-width: 601px) {
+    margin-top: 0;
+    padding: 0;
 
-  background-position-x: -15vw;
-
-  @media screen and (max-width: 1024px) {
-    background-size: 72.5%;
-    background-position-x: -20vw;
-    height: 50vh;
+    background-image: url(../images/illustration-laptop-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 35rem;
+    background-position-x: -10rem;
+  }
+  @media screen and (min-width: 769px) {
+    background-size: 40rem;
+    background-position-x: -10rem;
     margin-top: 0;
     padding: 2rem 0;
   }
-  @media screen and (max-width: 768px) {
-    background-size: 72.5%;
-    height: 50vh;
-    margin-top: 0;
-    padding: 1rem 0;
-  }
+  @media screen and (min-width: 1025px) {
+    padding: 10rem 0;
 
-  @media screen and (max-width: 600px) {
-    height: fit-content;
-    background-image: none;
-    padding: 1rem 0;
-    margin-top: 0;
+    background-size: 50rem;
+    background-position-x: -16vw;
   }
 }
 
 .section-3 .inner__section {
-  height: 100%;
   display: flex;
   align-items: center;
-  @media screen and (max-width: 600px) {
-    flex-direction: column;
+  flex-direction: column;
+  @media screen and (min-width: 600px) {
+    flex-direction: row;
   }
 }
 
 .section-3 .column {
-  flex: 1;
-  padding-left: 2rem;
+  width: 100%;
+  padding: 0;
   color: var(--very-dark-desaturated-blue);
+  text-align: center;
 
-  @media screen and (max-width: 600px) {
-    width: 100%;
-    padding: 0;
+  @media screen and (min-width: 601px) {
+    flex: 1;
     color: var(--very-dark-desaturated-blue);
-    text-align: center;
+    text-align: left;
   }
 }
 
 .section-3 .column .section-3-cover {
+  display: block;
   width: 100%;
-  display: none;
-
-  @media screen and (max-width: 600px) {
-    display: block;
-    width: 100%;
+  @media screen and (min-width: 600px) {
+    display: none;
   }
 }
 .section-3 .column h4 {
-  padding: 1rem 0;
+  padding: 1rem 0.5rem;
   font-size: 1.45rem;
-  @media screen and (max-width: 600px) {
-    padding: 1rem 0.5rem;
+  font-weight: bold;
+  @media screen and (min-width: 600px) {
     font-size: 1.45rem;
-    font-weight: bold;
+    padding: 1rem 0;
   }
 }
 .section-3 .column p {
-  @media screen and (max-width: 600px) {
-    padding: 0 0.5rem;
+  font-size: 1.2rem;
+  line-height: 1.75rem;
+  padding: 0 0.5rem;
+  @media screen and (min-width: 600px) {
+    padding: 0;
   }
 }
 
